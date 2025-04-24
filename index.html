@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaoru-Prime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="burger" id="burgerMenu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            
+            <ul class="menu" id="menu">
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Запрос</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1 >Добро пожаловать на Kaoru - Prime</h1>
+        <p>Мы поможем вам улучшить интерфейс вашего приложения, игры, сайта.</p>
+        <button id="openModal">Узнать больше</button>
+    </section>
+
+    <section id="imag">
+        <h2>Наше лого</h2>
+        <div class="imaga">
+            <img src="image.jpg">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>О нас</h2>
+        <p style="font-size: 130%;">Kaoru - Prime - команда из трех человек, занимающаяся тремя видами работы. </br>
+           Игра - за нее отвечает создатель команды - Kaoru. </br>
+           Приложение - за нее отвечает второй помощник - Mystaz. </br>
+           Сайт - за сайт отвечает наш профессионал с многолетним стажем работы - Kolman.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Услуги</h2>
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, 'service1')">Игра</button>
+            <button class="tablink" onclick="openTab(event, 'service2')">Приложение</button>
+            <button class="tablink" onclick="openTab(event, 'service3')">Сайт</button>
+        </div>
+        <div id="service1" class="tabcontent">
+            <h3>Игра</h3>
+            <p>Мы работаем на большинстве движков, но предпочитаем работать на Unreal Engine. Однако, это не помешает нам помочь вам и с другими движками. Мы улучшаем персонажей, визуализацию, и многое другое.</p>
+        </div>
+
+        <div id="service2" class="tabcontent" style="display:none">
+            <h3>Приложение</h3>
+            <p>Мы работаем с IOS и с Android. Мы так же можем помочь с иными приложениями, просто укажите - с какими.</p>
+        </div>
+
+        <div id="service3" class="tabcontent" style="display:none">
+            <h3>Сайт</h3>
+            <p>Мы работаем с Visual Studio Code. Можем помочь вам с созданием сайта с нуля, но только помочь.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Запрос</h2>
+        <p>Свяжитесь с нами через форму ниже.</p>
+        <form>
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш email" required>
+            <textarea placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Дополнительная информация</h2>
+            <p>Мы поможем вам улучшить интерфейс приложения, сайта, игры. Достаточно написать в секцию "Запрос", или нам на почту kaoruprime@yandex.ru с интересующей вас просьбой.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
